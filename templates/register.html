@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Pagina de cadastro</h5>
+<div class="container">
+<form action="" method="POST">
+    {{ formulario.hidden_tag() }}
+    <div class="row">
+            <div class="input-field col s12">
+                {{ formulario.username }}
+                {{ formulario.username.label }}
+            </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            {{ formulario.email }}
+            {{ formulario.email.label }}
+        </div>
+</div>
+<div class="row">
+    <div class="input-field col s12">
+        {{ formulario.senha }}
+        {{ formulario.senha.label }}
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s12">
+        {{ formulario.repita_senha }}
+        {{ formulario.repita_senha.label }}
+    </div>
+</div>
+{{ formulario.botao }}
+</form>
+</div>
+
+{% endblock content %}
+
